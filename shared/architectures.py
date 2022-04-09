@@ -20,6 +20,10 @@ from tensorflow.python.keras import backend
 from tensorflow.keras.applications.resnet50 import ResNet50
 from tensorflow.keras.applications.densenet import DenseNet121
 
+import ssl
+
+ssl._create_default_https_context = ssl._create_unverified_context
+
 def create_architecture(params):
 	# architectures without random augmentation
 	if params['random_augmentation'] == 'False':
