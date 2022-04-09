@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 
-DATA_DIR = '/data/places-augmented/'
+DATA_DIR = '/data/places-augmented'
 IMAGE_DIR = '/data/cub-200-2011/CUB_200_2011'
 SEGMENTATION_DIR = '/data/cub-200-2011/segmentations'
 
