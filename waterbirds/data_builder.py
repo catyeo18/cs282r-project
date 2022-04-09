@@ -1,18 +1,5 @@
-# Copyright 2020 Google LLC
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-"""Functions to create the waterbirds datasets.
+"""
+Functions to create the waterbirds datasets.
 
 Code based on https://github.com/kohpangwei/group_DRO/blob/master/
 	dataset_scripts/generate_waterbirds.py
@@ -24,10 +11,9 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 
-DATA_DIR = '/path/to/processed_places_data/'
-IMAGE_DIR = '/path/to/CUB_200_2011/'
-SEGMENTATION_DIR = '/path/to/segmentations/'
-
+DATA_DIR = '/data/places-augmented/'
+IMAGE_DIR = '/data/cub-200-2011/CUB_200_2011'
+SEGMENTATION_DIR = '/data/cub-200-2011/segmentations'
 
 NUM_PLACE_IMAGES_CLEAN = 8000
 WATER_IMG_DIR_CLEAN = 'water_easy'
@@ -287,7 +273,7 @@ def load_created_data(experiment_directory, py1_y0_s):
 	return train_data, validation_data, test_data_dict
 
 def create_save_waterbird_lists(experiment_directory, py0=0.8, p_tr=.7,
-	p_val=p_val, py1_y0=1,py1_y0_s=.5, pflip0=.1, pflip1=.1,
+	p_val=0.25, py1_y0=1,py1_y0_s=.5, pflip0=.1, pflip1=.1,
 	clean_back='False', random_seed=None):
 
 	if (py0 != 0.8) and (py0 != 0.5):
