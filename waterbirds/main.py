@@ -62,6 +62,7 @@ flags.DEFINE_string('minimize_logits', 'False',
 flags.DEFINE_string('asym_train', 'False',
 		'asymmetric probability during training time?.')
 flags.DEFINE_string('gpuid', '0', 'Gpu id to run the model on.')
+flags.DEFINE_string('clean_back', 'True', 'whether data is clean')
 
 
 def main(argv):
