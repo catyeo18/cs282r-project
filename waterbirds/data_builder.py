@@ -11,9 +11,9 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 
-DATA_DIR = '/data/places-augmented'
-IMAGE_DIR = '/data/cub-200-2011/CUB_200_2011'
-SEGMENTATION_DIR = '/data/cub-200-2011/segmentations'
+DATA_DIR = 'data/places-augmented'
+IMAGE_DIR = 'data/cub-200-2011/CUB_200_2011/CUB_200_2011'
+SEGMENTATION_DIR = 'data/cub-200-2011/segmentations'
 
 NUM_PLACE_IMAGES_CLEAN = 8000
 WATER_IMG_DIR_CLEAN = 'water_easy'
@@ -228,7 +228,7 @@ def create_images_labels(bird_data_frame, water_images, land_images, py1_y0=1,
 def save_created_data(data_frame, experiment_directory, filename):
 	data_frame['img_filename'] = data_frame['img_filename'].str[:-3]
 	txt_df = f'{IMAGE_DIR}/images/' + data_frame.img_filename + 'jpg' + \
-		',' + SEGMENTATION_DIR + data_frame.img_filename + 'png' + \
+		',' + f'{SEGMENTATION_DIR}/' + data_frame.img_filename + 'png' + \
 		',' + f'{DATA_DIR}/places_data/' + data_frame.background_filename + \
 		',' + data_frame.y0.astype(str) + \
 		',' + data_frame.y1.astype(str) + \
