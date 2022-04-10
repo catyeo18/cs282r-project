@@ -182,7 +182,7 @@ def train(exp_dir,
 		test_params['weighted_mmd'] = 'False'
 		test_params['balanced_weights'] = 'False'
 		for py in py1_y0_shift_list:
-			eval_input_fn = eval_input_fn_creater(py, test_params, asym=False)
+			eval_input_fn = eval_input_fn_creater(py, test_params)
 			distribution_results = est.evaluate(eval_input_fn, steps=1e5)
 			sym_results[f'shift_{py}'] = distribution_results
 

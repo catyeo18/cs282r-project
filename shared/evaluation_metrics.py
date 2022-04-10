@@ -152,7 +152,9 @@ def auroc(labels, predictions):
 	return auc_metric
 
 def get_eval_metrics_dict(labels, predictions, sample_weights,
-	sample_weights_pos, sample_weights_neg, sigma_list, params):
+	sample_weights_pos, sample_weights_neg, 
+	# sigma_list, 
+	params):
 	y_main = tf.expand_dims(labels[:, params["label_ind"]], axis=-1)
 
 	eval_metrics_dict = {}
