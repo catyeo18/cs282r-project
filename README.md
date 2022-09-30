@@ -16,7 +16,7 @@ Brief runthrough of the notebooks in `notebooks/`:
 - `data_visualization.ipynb`: Our notebook for generating a few Seaborn visualizations. (Uses CSV files that we compiled our experimental results into.) 
 
 Brief description of the structure of `data/`:
- - In a folder called `cub-200-2011' put the following two datasets:
+ - In a folder called `cub-200-2011` put the following two datasets:
  -- The "images and annotations" from [here](http://www.vision.caltech.edu/datasets/cub_200_2011/). This folder should be named `CUB-200-2011`, note the caps this time
  -- The "segmentations" from [here](http://www.vision.caltech.edu/datasets/cub_200_2011/). This folder should be named `segmentations`
  - In the folder called `val_large` put the large validation dataset from [here](http://places2.csail.mit.edu/download.html). You could replace this with a different one, we used this mostly for size constraints. 
